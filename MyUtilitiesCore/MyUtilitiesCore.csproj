@@ -1,0 +1,33 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <PublishReadyToRun>true</PublishReadyToRun>
+    <UseWPF>true</UseWPF>
+
+    <GenerateAssemblyInfo>true</GenerateAssemblyInfo>
+    <RootNamespace>MyUtilities</RootNamespace>
+    <AssemblyName>MyUtilities</AssemblyName>
+    <PackageId>MyUtilities</PackageId>
+    <Version>1.0.2</Version>
+    <Description>A small string utility</Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="MyUtilitiesCore-Publish\**" />
+    <Compile Remove="Publish\**" />
+    <None Remove="MyUtilitiesCore-Publish\**" />
+    <None Remove="Publish\**" />
+    <None Remove="publish.bat" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Nlog" Version="4.6.*" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="Nlog.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+</Project>
