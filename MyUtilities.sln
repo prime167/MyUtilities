@@ -5,7 +5,9 @@ VisualStudioVersion = 16.0.28917.182
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StringUtilities", "StringUtilitiesNFW\StringUtilities.csproj", "{E898CEF8-3ECC-47BC-951E-2D35E1BF0AC1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StringUtilitiesCore", "StringUtilitiesCore\StringUtilitiesCore.csproj", "{18A2A98E-36FA-4947-8678-86E93DF428DF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StringUtilitiesCore", "StringUtilitiesCore\StringUtilitiesCore.csproj", "{18A2A98E-36FA-4947-8678-86E93DF428DF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SetIP", "SetIP\SetIP.csproj", "{2B4F87CA-1E83-4A55-8B47-506390459BCC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{18A2A98E-36FA-4947-8678-86E93DF428DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{18A2A98E-36FA-4947-8678-86E93DF428DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{18A2A98E-36FA-4947-8678-86E93DF428DF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2B4F87CA-1E83-4A55-8B47-506390459BCC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B4F87CA-1E83-4A55-8B47-506390459BCC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B4F87CA-1E83-4A55-8B47-506390459BCC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B4F87CA-1E83-4A55-8B47-506390459BCC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

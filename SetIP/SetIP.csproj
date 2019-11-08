@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <RootNamespace>SetIP</RootNamespace>
+    <AssemblyName>SetIP</AssemblyName>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <!--<PublishSingleFile>true</PublishSingleFile>
+    <PublishTrimmed>true</PublishTrimmed>
+    <PublishReadyToRun>true</PublishReadyToRun>-->
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="System.Management" Version="4.7.0-preview2.19523.17" />
+  </ItemGroup>
+
+</Project>
