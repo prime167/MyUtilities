@@ -7,17 +7,17 @@
     <UseWPF>true</UseWPF>
 
     <GenerateAssemblyInfo>true</GenerateAssemblyInfo>
-    <RootNamespace>MyUtilities</RootNamespace>
-    <AssemblyName>MyUtilities</AssemblyName>
-    <PackageId>MyUtilities</PackageId>
+    <RootNamespace>StringUtilities</RootNamespace>
+    <AssemblyName>StringUtilities</AssemblyName>
+    <PackageId>StringUtilities</PackageId>
     <Version>1.0.3</Version>
     <Description>A small string utility</Description>
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="MyUtilitiesCore-Publish\**" />
+    <Compile Remove="StringUtilitiesCore-Publish\**" />
     <Compile Remove="Publish\**" />
-    <None Remove="MyUtilitiesCore-Publish\**" />
+    <None Remove="StringUtilitiesCore-Publish\**" />
     <None Remove="Publish\**" />
     <None Remove="publish.bat" />
   </ItemGroup>
