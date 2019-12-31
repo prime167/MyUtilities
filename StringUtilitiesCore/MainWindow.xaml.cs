@@ -160,6 +160,7 @@ namespace StringUtilities
         {
             var all = File.ReadAllText(RuleFile);
             txt1.Text = all;
+            lbl.Content = RuleFile;
         }
 
         private void BtnSave_OnClick(object sender, RoutedEventArgs e)
