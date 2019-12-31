@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Windows;
@@ -9,6 +11,8 @@ namespace StringUtilities
 {
     public partial class MainWindow : Window
     {
+        private const string RuleFile = @"D:\code\blocklist\rules.txt";
+
         public MainWindow()
         {
             InitializeComponent();
@@ -150,6 +154,23 @@ namespace StringUtilities
             txt1.Text = txt3.Text;
             txt2.Clear();
             txt3.Clear();
+        }
+
+        private void MainWindow_OnLoaded(object sender, RoutedEventArgs e)
+        {
+            var all = File.ReadAllText(RuleFile);
+            txt1.Text = all;
+        }
+
+        private void BtnSave_OnClick(object sender, RoutedEventArgs e)
+        {
+            File.WriteAllText(RuleFile,txt1.Text);
+        }
+
+        private void BtnOpenDir_OnClick(object sender, RoutedEventArgs e)
+        {
+            var dir = Path.GetDirectoryName(RuleFile);
+            Process.Start("explorer.exe", dir);
         }
     }
 }
