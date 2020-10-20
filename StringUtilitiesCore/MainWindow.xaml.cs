@@ -156,9 +156,9 @@ namespace StringUtilities
             txt3.Clear();
         }
 
-        private void MainWindow_OnLoaded(object sender, RoutedEventArgs e)
+        private async void MainWindow_OnLoaded(object sender, RoutedEventArgs e)
         {
-            var all = File.ReadAllText(RuleFile);
+            var all = await File.ReadAllTextAsync(RuleFile);
             txt1.Text = all;
             lbl.Content = RuleFile;
         }

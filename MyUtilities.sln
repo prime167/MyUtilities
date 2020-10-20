@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StringUtilitiesCore", "Stri
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SetIP", "SetIP\SetIP.csproj", "{2B4F87CA-1E83-4A55-8B47-506390459BCC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SetIP1", "SetIP1\SetIP1.csproj", "{271604E6-894E-4692-8A57-019A40BD163C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{2B4F87CA-1E83-4A55-8B47-506390459BCC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2B4F87CA-1E83-4A55-8B47-506390459BCC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2B4F87CA-1E83-4A55-8B47-506390459BCC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{271604E6-894E-4692-8A57-019A40BD163C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{271604E6-894E-4692-8A57-019A40BD163C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{271604E6-894E-4692-8A57-019A40BD163C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{271604E6-894E-4692-8A57-019A40BD163C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

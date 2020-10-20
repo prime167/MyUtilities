@@ -1,8 +1,8 @@
-﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <TargetFramework>net5.0-windows</TargetFramework>
     <PublishReadyToRun>false</PublishReadyToRun>
     <UseWPF>true</UseWPF>
 
@@ -10,7 +10,7 @@
     <RootNamespace>StringUtilities</RootNamespace>
     <AssemblyName>StringUtilities</AssemblyName>
     <PackageId>StringUtilities</PackageId>
-    <Version>1.0.3</Version>
+    <Version>1.0.4</Version>
     <Description>A small string utility</Description>
   </PropertyGroup>
 
@@ -23,7 +23,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Nlog" Version="4.6.*" />
+    <PackageReference Include="Nlog" Version="4.7.5" />
   </ItemGroup>
   <ItemGroup>
     <None Update="Nlog.config">
