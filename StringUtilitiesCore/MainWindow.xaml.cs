@@ -12,6 +12,7 @@ namespace StringUtilities
     public partial class MainWindow : Window
     {
         private const string RuleFile = @"D:\code\blocklist\rules.txt";
+        private const string NewLine = "\r\n";
 
         public MainWindow()
         {
@@ -27,8 +28,8 @@ namespace StringUtilities
             //var lines1 = GetLines(txt1);
             //var lines2 = GetLines(txt2);
 
-            var lines1 = txt1.Text.Split(new[] {"\r\n"}, StringSplitOptions.RemoveEmptyEntries).Select(r => r.Trim()).ToHashSet();
-            var lines2 = txt2.Text.Split(new[] { "\r\n" }, StringSplitOptions.RemoveEmptyEntries).Select(r => r.Trim()).ToHashSet();
+            var lines1 = txt1.Text.Split(new[] {NewLine}, StringSplitOptions.RemoveEmptyEntries).Select(r => r.Trim()).ToHashSet();
+            var lines2 = txt2.Text.Split(new[] {NewLine }, StringSplitOptions.RemoveEmptyEntries).Select(r => r.Trim()).ToHashSet();
 
             lines1.UnionWith(lines2);
 
@@ -36,7 +37,7 @@ namespace StringUtilities
             foreach (var line in lines1)
             {
                 sb.Append(line);
-                sb.Append("\r\n");
+                sb.Append(NewLine);
             }
 
             if (sb.Length >= 2)
@@ -59,8 +60,8 @@ namespace StringUtilities
             //var lines1 = GetLines(txt1);
             //var lines2 = GetLines(txt2);
 
-            var lines1 = txt1.Text.Split(new[] { "\r\n" }, StringSplitOptions.RemoveEmptyEntries).Select(r => r.Trim()).ToHashSet();
-            var lines2 = txt2.Text.Split(new[] { "\r\n" }, StringSplitOptions.RemoveEmptyEntries).Select(r => r.Trim()).ToHashSet();
+            var lines1 = txt1.Text.Split(new[] { NewLine }, StringSplitOptions.RemoveEmptyEntries).Select(r => r.Trim()).ToHashSet();
+            var lines2 = txt2.Text.Split(new[] { NewLine }, StringSplitOptions.RemoveEmptyEntries).Select(r => r.Trim()).ToHashSet();
 
             lines1.IntersectWith(lines2);
 
@@ -68,7 +69,7 @@ namespace StringUtilities
             foreach (var line in lines1)
             {
                 sb.Append(line);
-                sb.Append("\r\n");
+                sb.Append(NewLine);
             }
 
             if (sb.Length >= 2)
@@ -91,8 +92,8 @@ namespace StringUtilities
             //var lines1 = GetLines(txt1);
             //var lines2 = GetLines(txt2);
 
-            var lines1 = txt1.Text.Split(new[] { "\r\n" }, StringSplitOptions.RemoveEmptyEntries).Select(r => r.Trim()).ToHashSet();
-            var lines2 = txt2.Text.Split(new[] { "\r\n" }, StringSplitOptions.RemoveEmptyEntries).Select(r => r.Trim()).ToHashSet();
+            var lines1 = txt1.Text.Split(new[] { NewLine }, StringSplitOptions.RemoveEmptyEntries).Select(r => r.Trim()).ToHashSet();
+            var lines2 = txt2.Text.Split(new[] { NewLine}, StringSplitOptions.RemoveEmptyEntries).Select(r => r.Trim()).ToHashSet();
 
             lines1.ExceptWith(lines2);
 
@@ -100,7 +101,7 @@ namespace StringUtilities
             foreach (var line in lines1)
             {
                 sb.Append(line);
-                sb.Append("\r\n");
+                sb.Append(NewLine);
             }
 
             if (sb.Length >= 2)
@@ -123,14 +124,14 @@ namespace StringUtilities
 
         private void BtnSort_OnClick(object sender, RoutedEventArgs e)
         {
-            var lines = txt3.Text.Split(new[] { "\r\n" }, StringSplitOptions.RemoveEmptyEntries).Select(r => r.Trim()).ToList();
+            var lines = txt3.Text.Split(new[] { NewLine }, StringSplitOptions.RemoveEmptyEntries).Select(r => r.Trim()).ToList();
             lines.Sort();
 
             var sb = new StringBuilder();
             foreach (var line in lines)
             {
                 sb.Append(line);
-                sb.Append("\r\n");
+                sb.Append(NewLine);
             }
 
             if (sb.Length >= 2)
