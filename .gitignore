@@ -338,4 +338,4 @@ ASALocalRun/
 
 # BeatPulse healthcheck temp database
 healthchecksdb
-/MyUtilitiesCore/MyUtilitiesCore-Publish
+StringUtilitiesCore/StringUtilitiesCore-Publish/*

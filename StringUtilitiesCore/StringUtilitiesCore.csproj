@@ -23,7 +23,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Nlog" Version="4.7.5" />
+    <PackageReference Include="Nlog" Version="4.7.*" />
   </ItemGroup>
   <ItemGroup>
     <None Update="Nlog.config">
