@@ -28,8 +28,8 @@ namespace StringUtilities
             //var lines1 = GetLines(txt1);
             //var lines2 = GetLines(txt2);
 
-            var lines1 = txt1.Text.Split(new[] {NewLine}, StringSplitOptions.RemoveEmptyEntries).Select(r => r.Trim()).ToHashSet();
-            var lines2 = txt2.Text.Split(new[] {NewLine }, StringSplitOptions.RemoveEmptyEntries).Select(r => r.Trim()).ToHashSet();
+            var lines1 = txt1.Text.Split(new[] { NewLine }, StringSplitOptions.RemoveEmptyEntries).Select(r => r.Trim()).ToHashSet();
+            var lines2 = txt2.Text.Split(new[] { NewLine }, StringSplitOptions.RemoveEmptyEntries).Select(r => r.Trim()).ToHashSet();
 
             lines1.UnionWith(lines2);
 
@@ -93,15 +93,17 @@ namespace StringUtilities
             //var lines2 = GetLines(txt2);
 
             var lines1 = txt1.Text.Split(new[] { NewLine }, StringSplitOptions.RemoveEmptyEntries).Select(r => r.Trim()).ToHashSet();
-            var lines2 = txt2.Text.Split(new[] { NewLine}, StringSplitOptions.RemoveEmptyEntries).Select(r => r.Trim()).ToHashSet();
-
+            var lines2 = txt2.Text.Split(new[] { NewLine }, StringSplitOptions.RemoveEmptyEntries).Select(r => r.Trim()).ToHashSet();
+            var lines4 = txt4.Text.Split(new[] { NewLine }, StringSplitOptions.RemoveEmptyEntries).Select(r => r.Trim()).ToHashSet();
             lines1.ExceptWith(lines2);
-
             var sb = new StringBuilder();
             foreach (var line in lines1)
             {
-                sb.Append(line);
-                sb.Append(NewLine);
+                if (!lines4.Any(x => line.Contains(x)))
+                {
+                    sb.Append(line);
+                    sb.Append(NewLine);
+                }
             }
 
             if (sb.Length >= 2)
@@ -146,8 +148,11 @@ namespace StringUtilities
         private void Txt_OnTextChanged(object sender, TextChangedEventArgs e)
         {
             var txt = e.OriginalSource as TextBox;
-            var tb = (TextBlock)FindName("tb" + txt.Name[^1]);
-            tb.Text = txt.LineCount + " 条记录";
+            if (txt.Name[^1] != '4')
+            {
+                var tb = (TextBlock)FindName("tb" + txt.Name[^1]);
+                tb.Text = txt.LineCount + " 条记录";
+            }
         }
 
         private void BtnToLeft_OnClick(object sender, RoutedEventArgs e)
@@ -166,7 +171,7 @@ namespace StringUtilities
 
         private void BtnSave_OnClick(object sender, RoutedEventArgs e)
         {
-            File.WriteAllText(RuleFile,txt1.Text);
+            File.WriteAllText(RuleFile, txt1.Text);
         }
 
         private void BtnOpenDir_OnClick(object sender, RoutedEventArgs e)

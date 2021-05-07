@@ -24,6 +24,7 @@
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
+            <RowDefinition Height="6*" />
             <RowDefinition Height="*" />
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
@@ -32,27 +33,29 @@
             x:Name="lbl" Grid.Row="0" Grid.Column="0" Background="LightBlue"
             Content="filename here" />
         <TextBox
-            x:Name="txt1" Grid.Row="1" Grid.Column="0" />
+            x:Name="txt1" Grid.Row="1" Grid.Column="0" Grid.RowSpan="2" />
         <Button
             x:Name="BtnExchange" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center"
             VerticalAlignment="Center" Click="BtnExchange_OnClick" Content="&lt;=&gt;" />
         <TextBox
             x:Name="txt2" Grid.Row="1" Grid.Column="2" />
         <TextBox
-            x:Name="txt3" Grid.Row="1" Grid.Column="3" />
+            x:Name="txt4" Grid.Row="2" Grid.Column="2" />
+        <TextBox
+            x:Name="txt3" Grid.Row="1" Grid.Column="3" Grid.RowSpan="2" />
         <TextBlock
-            x:Name="tb1" Grid.Row="2" Grid.Column="0">
+            x:Name="tb1" Grid.Row="3" Grid.Column="0">
             0 条记录
         </TextBlock>
         <TextBlock
-            x:Name="tb2" Grid.Row="2" Grid.Column="2">
+            x:Name="tb2" Grid.Row="3" Grid.Column="2">
             0 条记录
         </TextBlock>
         <TextBlock
-            x:Name="tb3" Grid.Row="2" Grid.Column="3">
+            x:Name="tb3" Grid.Row="3" Grid.Column="3">
             0 条记录
         </TextBlock>
-        <Grid Grid.Row="3" Grid.Column="0">
+        <Grid Grid.Row="4" Grid.Column="0">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition />
                 <ColumnDefinition />
@@ -68,7 +71,7 @@
                 打开目录
             </Button>
         </Grid>
-        <Grid Grid.Row="3" Grid.Column="3">
+        <Grid Grid.Row="4" Grid.Column="3">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition />
                 <ColumnDefinition />

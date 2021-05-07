@@ -19,7 +19,7 @@ namespace SetIP_WPF
         private readonly Dispatcher _dispatcher;
         private int _counterSuccess;
         private int _counterFail;
-        static readonly object Locker = new object();
+        static readonly object Locker = new();
 
         public MainWindow()
         {
@@ -124,13 +124,19 @@ namespace SetIP_WPF
 
         public void GetNetAdapters()
         {
-            foreach (NetworkInterface nic in NetworkInterface.GetAllNetworkInterfaces())
+            foreach (NetworkInterface ni in NetworkInterface.GetAllNetworkInterfaces())
             {
-                if (nic.NetworkInterfaceType != NetworkInterfaceType.Loopback)
+                var addr = ni.GetIPProperties().GatewayAddresses.FirstOrDefault();
+                if (addr != null)
                 {
-                    lbNic.Items.Add(nic.Description);
+                    if (ni.NetworkInterfaceType == NetworkInterfaceType.Wireless80211 || ni.NetworkInterfaceType == NetworkInterfaceType.Ethernet)
+                    {
+                        lbNic.Items.Add(ni.Description);
+                    }
                 }
             }
+
+            lbNic.SelectedIndex = 0;
         }
 
         private void LbNic_OnSelectionChanged(object sender, SelectionChangedEventArgs e)
